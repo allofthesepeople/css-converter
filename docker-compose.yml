@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: ["python", "/src/app/app.py"]
+    container_name: app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src/app:/src/app
